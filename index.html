@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Website Data Diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e5dd97;
+            color: #1f1e1e
+        }
+        
+        header {
+            background: #515839;
+            color: #b1cbb4;
+            padding: 20px;
+            text-align: center
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #dbe5dc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+        }
+        
+        h1,
+        h2 {
+            margin-top: 0
+        }
+        
+        .profile-pic {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px
+        }
+        
+        th,
+        td {
+            border: 1px solid #515839;
+            padding: 8px;
+            text-align: center
+        }
+        
+        th {
+            background: #b1cbb4;
+            color: #515839
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px
+        }
+        
+        section h2 {
+            color: #515839;
+        }
+        
+        section p {
+            color: #515839;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .music-controls {
+            margin: 20px 0;
+        }
+        
+        .music-controls button {
+            background: #515839;
+            color: #b1cbb4;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .music-controls button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kenalan Sama Rekhi</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2></h2>
+            <img class="profile-pic" src="sitampan.jpg" alt="Foto Profil">
+        </section>
+
+        <section>
+            <h2>Inilah Tentangku</h2>
+            <p>Pria diatas ini Bernama Rekhi Wirya Adjie, Remaja berusia 18 tahun yang dikenal dengan keramahannya dan kebaikannya oleh orang orang.</p>
+        </section>
+
+        <section>
+            <h2>Jadwalnya Rekhi</h2>
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>Mata Kuliah</th>
+                    <th>Jam</th>
+                    <th>Ruang</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Senin</td>
+                    <td>Komputerisasi Ekonomi & Bisnis</td>
+                    <td>13:00 - 14:00</td>
+                    <td>GL-4A</td>
+                </tr>
+
+                <tr>
+                    <td>Lab Basis Data 2</td>
+                    <td>08:00 - 09:40</td>
+                    <td>Lab 3</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">Selasa</td>
+                    <td>IELTS Preparation</td>
+                    <td>10:30 - 12:10</td>
+                    <td>D-102</td>
+                </tr>
+
+                <tr>
+                    <td>Lab Struktur Data 6</td>
+                    <td>12:10 - 13:50</td>
+                    <td>Lab 2</td>
+                </tr>
+
+                <tr>
+                    <td>Lab Pemograman Web 6</td>
+                    <td>13:50 - 15:30</td>
+                    <td>Lab 3</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">Rabu</td>
+                    <td>Struktur Data</td>
+                    <td>08:00 - 10:30</td>
+                    <td>D-104</td>
+                </tr>
+
+                <tr>
+                    <td>Pemograman Web</td>
+                    <td>14:40 - 17:10</td>
+                    <td>D-102</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Jumat</td>
+                    <td>Basis Data</td>
+                    <td>08:00 - 10:30</td>
+                    <td>D-101</td>
+                </tr>
+                <tr>
+                    <td>Wirausaha Digital</td>
+                    <td>10:30 - 12:10</td>
+                    <td>D-105</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <div class="music-controls">
+        <audio id="bg-music" loop>
+      <source src="lagunih.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
+        <button onclick="document.getElementById('bg-music').play()">▶</button>
+        <button onclick="document.getElementById('bg-music').pause()">⏸</button>
+    </div>
+
+    <footer>
+        <p>© [2025] — Website Data Diri Mata Kuliah Pemograman Web</p>
+    </footer>
+
+    <script>
+        window.onload = () => {
+            alert("Selamat datang di webnya Rekhi!");
+        };
+    </script>
+
+    <script>
+        const img = document.querySelector('.profile-pic');
+        img.addEventListener('mouseover', () => {
+            img.style.transform = 'scale(1.50)';
+            img.style.transition = '0.5s';
+        });
+        img.addEventListener('mouseout', () => {
+            img.style.transform = 'scale(1)';
+        });
+    </script>
+
+    <h1 id="typing"></h1>
+
+
+
+
+</body>
+
+</html>
